@@ -17,13 +17,13 @@ Array.from(buttons).map( (i, index) => {
     i.addEventListener('click', function(){
         i.style.color = 'red';
         footer.textContent = '';
-        if(index == 0){
+        if (index == 0) {
             gridContainer.hidden = false;
             flexContainer.hidden = true; 
-        } else{
+        } else {
             gridContainer.hidden = true;
             flexContainer.hidden = false; 
-        }
+        };
         setTimeout(() => {
             footer.textContent = this.firstElementChild.innerHTML;
             i.style.color = '';
