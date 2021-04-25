@@ -13,7 +13,7 @@ body{
 }
 
 :root{
-    --back-value: linear-gradient(to right, violet 35%, red 55%, white);
+    --back-value: linear-gradient(to right,rgb(15, 14, 14), violet 15%, red 55%, rgb(15, 14, 14));
     font-size: 14px;
 }
 
@@ -37,17 +37,22 @@ body{
     height: 70px;
     border-radius: 50%;
     padding: 10px;
-    background: radial-gradient(circle, rgba(187,59,208,1) 17%, rgba(188,63,208,1) 27%, rgba(235,176,245,1) 50%, rgb(78, 59, 59) 66%, rgb(59, 46, 46) 68%);
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: radial-gradient(circle, rgba(187, 42, 90, 0.856) 17%, rgba(216, 54, 108, 0.856) 27%, rgba(255, 136, 175, 0.856) 50%, rgb(78, 59, 59) 66%, rgb(59, 46, 46) 68%);
+}
+.buttonContainer>div:last-child{
+    background: radial-gradient(circle, rgba(187,59,208,1) 17%, rgba(188,63,208,1) 27%, rgba(213, 146, 224, 0.877) 50%, rgb(78, 59, 59) 66%, rgb(59, 46, 46) 68%);
 }
 .button>span{
     font-size: 1.2rem;
 }
 .button:hover{
-    color: red;
+    color: white;
+    transform: rotate(360deg);
+    transition: transform 0.7s, color 1s;
 }
 
 
@@ -114,6 +119,69 @@ p{
     font-weight: 400;
     margin: 0 0 10px;
 }
+
+
+/* flex */
+.flexContainer{
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@media screen and (max-width: 991px){
+    .gridTwoColumns{
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 767px){
+    .gridOneColumn{
+        grid-template: 1fr / 1fr;
+    }
+}
+
+.flexContainer>div{
+    margin: 0 0 50px;
+    padding: 0 15px;
+    text-align: center;
+}
+.flexContainer>div:hover{
+    background-color: rgb(230, 208, 235);
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    transform: scale(0.8);
+    transition: transform 0.5s, background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s;
+}
+.flexContainer>div:active{
+    background-color: rgb(228, 145, 210);
+    border-radius: 10px;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 0.5s, background-color 1s cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+}
+
+.content{
+    padding: 0 15px;
+}
+
+h5{
+    margin: 10px 0;
+    color: #2d3033;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+p{
+    font-weight: 400;
+    line-height: 22.4px;
+    color: #6c7279;
+    font-weight: 400;
+    margin: 0 0 10px;
+}
+
+
 
 footer{
     position: fixed;

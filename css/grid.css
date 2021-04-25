@@ -2,13 +2,13 @@
     --col-gatter: 30px;
   }
   
-  .container {
+  /* .container {
     display: flex;
     flex-wrap: wrap;
     max-width: 1200px;
     margin: auto;
   }
-  
+   */
   .col {
     flex-basis: 100%;
     padding: 20px calc(var(--col-gatter) / 2);

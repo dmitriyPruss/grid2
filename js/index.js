@@ -15,6 +15,7 @@ const footer = document.getElementsByTagName('footer')[0];
 const buttons = document.querySelectorAll('.button');
 Array.from(buttons).map( (i, index) => {
     i.addEventListener('click', function(){
+        i.style.color = 'red';
         footer.textContent = '';
         if(index == 0){
             gridContainer.hidden = false;
@@ -25,6 +26,7 @@ Array.from(buttons).map( (i, index) => {
         }
         setTimeout(() => {
             footer.textContent = this.firstElementChild.innerHTML;
-        }, 300)
+            i.style.color = '';
+        }, 250);
     });
 });
