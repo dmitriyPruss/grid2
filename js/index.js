@@ -1,12 +1,10 @@
 const svgCollection = document.querySelectorAll('svg');
 const paths = document.querySelectorAll('path');
 const size = '60px';
-const currentColor = '#e84545';
+const gridColor = '#e84545';
+const flexColor = 'rgb(121, 56, 141)';
 svgCollection.forEach(i => {
     i.setAttribute('style', `width: ${size}; height: ${size};`);
-});
-paths.forEach(i => {
-    i.setAttribute('style', `fill: ${currentColor};`);
 });
 
 const gridContainer = document.getElementById('grid');
@@ -19,10 +17,16 @@ Array.from(buttons).map( (i, index) => {
         footer.textContent = '';
         if (index == 0) {
             gridContainer.hidden = false;
-            flexContainer.hidden = true; 
+            flexContainer.hidden = true;
+            paths.forEach(i => {
+                i.setAttribute('style', `fill: ${gridColor};`);
+            });             
         } else {
             gridContainer.hidden = true;
-            flexContainer.hidden = false; 
+            flexContainer.hidden = false;
+            paths.forEach(i => {
+                i.setAttribute('style', `fill: ${flexColor};`);
+            });
         };
         setTimeout(() => {
             footer.textContent = this.firstElementChild.innerHTML;
