@@ -14,7 +14,6 @@
 .flexContainer>div:hover{
     background-color: rgb(230, 208, 235);
     border-radius: 10px;
-    padding: 5px;
     cursor: pointer;
     transform: scale(0.8);
     transition: transform 0.5s, background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s;
@@ -23,6 +22,6 @@
     background-color: rgb(228, 145, 210);
     border-radius: 10px;
     cursor: pointer;
-    transform: scale(1.05);
+    transform: scale(1);
     transition: transform 0.5s, background-color 1s cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
 }

@@ -1,11 +1,11 @@
 const svgCollection = document.querySelectorAll('svg');
 const paths = document.querySelectorAll('path');
+const size = '60px';
+const currentColor = '#e84545';
 svgCollection.forEach(i => {
-    let size = '60px';
     i.setAttribute('style', `width: ${size}; height: ${size};`);
 });
 paths.forEach(i => {
-    let currentColor = '#e84545';
     i.setAttribute('style', `fill: ${currentColor};`);
 });
 
@@ -27,6 +27,6 @@ Array.from(buttons).map( (i, index) => {
         setTimeout(() => {
             footer.textContent = this.firstElementChild.innerHTML;
             i.style.color = '';
-        }, 250);
+        }, 200);
     });
 });
