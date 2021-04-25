@@ -1,5 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700);
 @import './grid.css';
+@import './gridClass.css';
+@import './flexClass.css';
 
 *{
     box-sizing: border-box;
@@ -60,47 +62,6 @@ section{
     padding: 150px 0 100px;
 }
 
-.gridContainer{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    min-width: 300px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-@media screen and (max-width: 991px){
-    .gridTwoColumns{
-        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-    }
-}
-@media screen and (max-width: 767px){
-    .gridOneColumn{
-        grid-template: 1fr / 1fr;
-    }
-}
-
-.gridContainer>div{
-    margin: 0 0 50px;
-    padding: 0 15px;
-    text-align: center;
-}
-.gridContainer>div:hover{
-    background-color: rgb(233, 176, 245);
-    border-radius: 10px;
-    padding: 5px;
-    cursor: pointer;
-    transform: scale(0.8);
-    transition: transform 0.5s, background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s;
-}
-.gridContainer>div:active{
-    background-color: rgb(223, 209, 88);
-    border-radius: 10px;
-    cursor: pointer;
-    transform: scale(1.05);
-    transition: transform 0.5s, background-color 1s cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
-}
-
 .content{
     padding: 0 15px;
 }
@@ -119,69 +80,6 @@ p{
     font-weight: 400;
     margin: 0 0 10px;
 }
-
-
-/* flex */
-.flexContainer{
-    display: flex;
-    flex-wrap: wrap;
-    min-width: 300px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-@media screen and (max-width: 991px){
-    .gridTwoColumns{
-        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-    }
-}
-@media screen and (max-width: 767px){
-    .gridOneColumn{
-        grid-template: 1fr / 1fr;
-    }
-}
-
-.flexContainer>div{
-    margin: 0 0 50px;
-    padding: 0 15px;
-    text-align: center;
-}
-.flexContainer>div:hover{
-    background-color: rgb(230, 208, 235);
-    border-radius: 10px;
-    padding: 5px;
-    cursor: pointer;
-    transform: scale(0.8);
-    transition: transform 0.5s, background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s;
-}
-.flexContainer>div:active{
-    background-color: rgb(228, 145, 210);
-    border-radius: 10px;
-    cursor: pointer;
-    transform: scale(1.05);
-    transition: transform 0.5s, background-color 1s cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
-}
-
-.content{
-    padding: 0 15px;
-}
-
-h5{
-    margin: 10px 0;
-    color: #2d3033;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-p{
-    font-weight: 400;
-    line-height: 22.4px;
-    color: #6c7279;
-    font-weight: 400;
-    margin: 0 0 10px;
-}
-
-
 
 footer{
     position: fixed;

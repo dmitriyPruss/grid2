@@ -1,0 +1,40 @@
+.gridContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@media screen and (max-width: 991px){
+    .gridTwoColumns{
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 767px){
+    .gridOneColumn{
+        grid-template: 1fr / 1fr;
+    }
+}
+
+.gridContainer>div{
+    margin: 0 0 50px;
+    padding: 0 15px;
+    text-align: center;
+}
+.gridContainer>div:hover{
+    background-color: rgb(233, 176, 245);
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    transform: scale(0.8);
+    transition: transform 0.5s, background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s;
+}
+.gridContainer>div:active{
+    background-color: rgb(223, 209, 88);
+    border-radius: 10px;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 0.5s, background-color 1s cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+}
